@@ -236,7 +236,7 @@ Global
 	padding: 20px;
 	min-width: 200px;
 	width: 100%;
-	top:76px;
+	top:100%;
 	left: 0;
 	display: none;
 	border-radius: 12px;
@@ -301,4 +301,3 @@ Global
 	--tw-bg-opacity: 1;
 	background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
-

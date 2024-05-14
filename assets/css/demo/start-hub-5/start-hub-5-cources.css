@@ -1,0 +1,33 @@
+/* Global */
+:root {
+	--lqd-color-blue-100: #E3E4E8;
+	--lqd-color-blue-200: #D9F8EA;
+	--lqd-color-blue-300: #EBF8D9;
+	--lqd-color-blue-600: #696d79;
+	--lqd-color-gray-100: rgba(97, 150, 157, 0.18);
+	--lqd-color-green-100: #E1F2E6;
+	--lqd-color-green-200: #ECF0E7;
+	--lqd-color-green-400: #5AC394;
+	--lqd-color-green-500: #C7D0C1;
+	--lqd-color-green-600: #5e746a;
+	--lqd-color-slate-200: #e2e8f0;
+	--lqd-color-orange-100: #F0EBE7;
+	--lqd-color-orange-200: #F8E6D9;
+	--lqd-color-orange-300: #ffc29f;
+	--lqd-color-orange-600: #807264;
+	--lqd-color-yellow-600: #84806f;
+}
+
+
+.amount-btn {
+	padding: 8px 16px;
+	color: #ffffff !important;
+	background-color: #f91c1c;
+	border-radius: 12px;
+	opacity: 1 !important;
+	font-weight: 500;
+}
+
+.courses-cards article {
+	min-height: 345px;
+}
