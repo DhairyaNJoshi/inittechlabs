@@ -1,6 +1,5 @@
 import Section from "@/components/Section";
 import { TextGenerateEffect } from "@/components/ui/TextGenerateEffect";
-import React from "react";
 
 const HeroSection = () => {
   return (

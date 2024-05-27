@@ -1,6 +1,5 @@
 import Section from "@/components/Section";
 import { BentoGrid, BentoGridItem } from "@/components/ui/BentoGrid";
-import React from "react";
 
 const SERVICES = [
   {

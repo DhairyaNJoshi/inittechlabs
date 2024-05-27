@@ -1,7 +1,6 @@
-import React from "react";
+import AboutUs from "./AboutUs";
 import BannerSection from "./BannerSection";
 import HeroSection from "./HeroSection";
-import AboutUs from "./AboutUs";
 import OurServices from "./OurServices";
 import WhyChooseUs from "./WhyChooseUs";
 

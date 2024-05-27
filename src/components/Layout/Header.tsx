@@ -1,9 +1,9 @@
 "use client";
+import { IconMenu2 } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { HoverMenu, HoverMenuItem } from "../ui/HoverMenu";
-import { IconMenu2 } from "@tabler/icons-react";
 
 const Header = () => {
   const [activeHoverMenu, setActiveHoverMenu] = useState<string | null>(null);

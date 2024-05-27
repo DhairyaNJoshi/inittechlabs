@@ -1,7 +1,6 @@
 import Section from "@/components/Section";
 import { TextGenerateEffect } from "@/components/ui/TextGenerateEffect";
 import Image from "next/image";
-import React from "react";
 
 const AboutUs = () => {
   return (

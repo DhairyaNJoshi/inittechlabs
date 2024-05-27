@@ -1,0 +1,38 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.sortMembers": "explicit",
+    "source.sortImports": "explicit",
+    "source.organizeImports": "explicit"
+  },
+  "files.exclude": {
+    "node_modules/": true,
+    ".next/": true
+  },
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "cSpell.words": [
+    "Authorised",
+    "dilapidations",
+    "fulfilment",
+    "jeopardise",
+    "lettingaproperty",
+    "licence",
+    "licences",
+    "Majeure",
+    "organise",
+    "recaptcha",
+    "Rightmove",
+    "shorthold",
+    "Stephensons",
+    "swiper",
+    "tanstack",
+    "utilisation",
+    "Zoopla"
+  ],
+  "emmet.includeLanguages": { "javascript": "javascriptreact" },
+  "editor.quickSuggestions": {
+    "strings": true
+  }
+  // "tailwindCSS.rootFontSize": 10
+}
