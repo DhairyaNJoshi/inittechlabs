@@ -55,9 +55,9 @@ const ContactUsSection = () => {
             Contact INIT Tech Labs today to discuss your IT needs and explore
             how we can help your business thrive in the digital age.
           </p>
-          <div className="mx-auto mt-10 max-w-[600px] rounded-lg bg-white p-5 md:p-8 shadow-xl">
+          <div className="mx-auto mt-10 max-w-[600px] rounded-xl bg-white p-5 md:p-8` shadow-xl">
             <Form {...form}>
-              <p className="font-600 md:text-22 text-18 mb-3 leading-5 text-gray text-center">
+              <p className="font-600 md:text-22 text-18 my-3 leading-5 text-gray text-center">
                 Schedule a Free Consultation
               </p>
               <p className="font-500 mb-5 md:mb-7 leading-5 text-gray-100 text-center">
