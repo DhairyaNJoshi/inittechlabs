@@ -5,7 +5,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import * as React from "react";
 
 const buttonVariants = cva(
-  "rounded font-600 leading-5 lg:leading-6 border transition duration-100 ease-in-out whitespace-nowrap",
+  "rounded-md font-600 leading-5 lg:leading-6 border transition duration-100 ease-in-out whitespace-nowrap",
   {
     variants: {
       variant: {
@@ -15,8 +15,8 @@ const buttonVariants = cva(
           "border-[#a0b0ae] text-gray bg-transparent hover:border-transparent hover:bg-gray hover:shadow-cst hover:text-white",
       },
       size: {
-        default: "px-5 2xl:px-10 lg:px-6 py-3 2xl:py-5 text-16 xl:text-20",
-        sm: "text-14 lg:text-16 py-3 px-6",
+        default: "px-5 lg:px-6 py-3 text-16 xl:text-20",
+        sm: "text-14 lg:text-16 py-2 px-5",
         xs: "text-14 p-2",
       },
     },

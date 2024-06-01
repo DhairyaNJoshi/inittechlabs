@@ -38,7 +38,10 @@ const Header = () => {
                 item="Training"
               >
                 <div className="grid gap-3 font-500 px-3">
-                  <Link href="/" className="hover:font-600 hover:scale-105">
+                  <Link
+                    href="/training/courses"
+                    className="hover:font-600 hover:scale-105"
+                  >
                     Buy Courses
                   </Link>
                   <Link href="/" className="hover:font-600 hover:scale-105">
