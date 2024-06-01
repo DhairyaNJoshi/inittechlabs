@@ -44,7 +44,10 @@ const Header = () => {
                   >
                     Buy Courses
                   </Link>
-                  <Link href="/" className="hover:font-600 hover:scale-105">
+                  <Link
+                    href="/training/personalised-training"
+                    className="hover:font-600 hover:scale-105"
+                  >
                     Personalised Training
                   </Link>
                   <Link href="/" className="hover:font-600 hover:scale-105">
