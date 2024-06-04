@@ -26,7 +26,7 @@ export const EXPERTISE_AREAS = [
     title: "eCommerce Solutions",
     description:
       "Our eCommerce solutions empower you to establish a thriving online presence. We offer:",
-    sectionClass: "bg-gray-50",
+    sectionClass: "bg-primary-50",
     cardData: [
       {
         title: "Ecommerce Platform Development",
@@ -72,7 +72,7 @@ export const EXPERTISE_AREAS = [
     title: "Custom Application Development",
     description:
       "We don't shy away from challenges. Our custom application development services cater to your unique needs:",
-    sectionClass: "bg-gray-50",
+    sectionClass: "bg-primary-50",
     cardData: [
       {
         title: "Business Process Automation:",
@@ -118,7 +118,7 @@ export const EXPERTISE_AREAS = [
     title: "UI/UX Design",
     description:
       "At INIT Tech Labs, we understand that exceptional design is the cornerstone of a successful web or mobile application. Our UI/UX design services encompass:",
-    sectionClass: "bg-gray-50",
+    sectionClass: "bg-primary-50",
     cardData: [
       {
         title: "User Interface (UI) Design",

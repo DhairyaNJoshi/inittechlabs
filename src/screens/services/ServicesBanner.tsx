@@ -8,7 +8,7 @@ const ServicesBanner = () => {
       <div className="grid md:grid-cols-2 gap-5 container">
         <div className="w-full max-w-[920px] p-5 md:text-start text-center">
           <TextGenerateEffect
-            words="INIT Tech Labs - Shaping the Future, Together"
+            words="Shaping the Future, Together"
             className="font-700 text-gray text-32 lg:text-48 leading-8 lg:leading-[48px]"
           />
           <TextGenerateEffect

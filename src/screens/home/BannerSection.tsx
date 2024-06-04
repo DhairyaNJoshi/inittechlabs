@@ -7,7 +7,7 @@ const BannerSection = () => {
       <div className="container flex justify-center">
         <div className="w-full max-w-[920px] p-5 md:text-start text-center">
           <TextGenerateEffect
-            words="INIT Tech Labs: Unleashing Innovation Through Technology"
+            words="Unleashing Innovation Through Technology"
             className="text-center font-700 text-gray text-32 lg:text-48 leading-8 lg:leading-[48px]"
           />
 

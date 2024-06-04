@@ -51,6 +51,7 @@ const config: Config = {
         primary: {
           DEFAULT: "#04BADE",
           50: "#E4EDFF",
+          100: "#0496C7",
         },
         secondary: {
           DEFAULT: "#E3E6E7",

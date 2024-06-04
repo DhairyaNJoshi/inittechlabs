@@ -11,14 +11,14 @@ const Header = () => {
     <div className="sticky top-0 z-[28] w-full bg-white shadow-md">
       <div className="container mx-auto p-4">
         <div className="flex justify-between">
-          <Link href="/" className="hover:font-600 hover:scale-105">
+          <Link href="/" className="hover:font-600">
             <Image
               src={"/images/INITlogo.png"}
               alt="logo"
               width={0}
               height={0}
               sizes="100vw"
-              className="h-full w-full sm:max-w-[100px] sm:max-h-[50px] max-w-[75px] max-h-[50px]"
+              className="h-full w-full sm:max-w-[200px] sm:max-h-[75px] max-w-[100px] max-h-[50px]"
             />
           </Link>
           <div className="hidden md:flex gap-x-5 md:gap-x-8 items-center text-gray font-600 lg:text-18">
