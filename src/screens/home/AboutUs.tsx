@@ -18,7 +18,7 @@ const AboutUs = () => {
         </div>
         <div className="w-full h-full order-2 md:order-1">
           <Image
-            src="/images/img_side.png"
+            src="/images/svg/home_about_us.svg"
             sizes="100vh"
             alt="hero image"
             width={0}

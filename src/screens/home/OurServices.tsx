@@ -49,9 +49,9 @@ const SERVICES = [
 ];
 const OurServices = () => {
   return (
-    <Section className="bg-primary-50">
+    <Section className="bg-primary-100">
       <div className="container text-center p-5">
-        <h2 className="font-700 text-gray text-32 lg:text-42 leading-8 lg:leading-[42px]">
+        <h2 className="font-700 text-white text-32 lg:text-42 leading-8 lg:leading-[42px]">
           Our Services
         </h2>
         <BentoGrid className="mt-10">
@@ -61,7 +61,7 @@ const OurServices = () => {
               title={item.title}
               description={item.description}
               className={cn(
-                "h-full bg-white/60 hover:bg-white/80 p-5 md:p-7 hover:cursor-pointer shadow-md",
+                "h-full bg-white hover:bg-white/90 p-5 md:p-7 hover:cursor-pointer shadow-md",
                 item?.cardClass
               )}
               titleClass="md:text-20 text-18 leading-6 text-start"

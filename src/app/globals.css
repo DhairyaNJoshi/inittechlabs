@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @import "../styles/custom.css";
+@import "../styles/tooltip.css";
 
 @tailwind utilities;
 

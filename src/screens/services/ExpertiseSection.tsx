@@ -1,6 +1,7 @@
 import Section from "@/components/Section";
 import { BentoGrid, BentoGridItem } from "@/components/ui/BentoGrid";
 import { TextGenerateEffect } from "@/components/ui/TextGenerateEffect";
+import { TracingBeam } from "@/components/ui/TracingBeam";
 import { EXPERTISE_AREAS } from "@/constants/ExpertiseAreas";
 import { cn } from "@/utils/cn";
 
@@ -19,44 +20,46 @@ const ExpertiseSection = () => {
           />
         </div>
       </Section>
-      {EXPERTISE_AREAS?.map((item, index) => (
-        <Section className={cn("!pb-40", item.sectionClass)} key={index}>
-          <div className="container text-center p-5">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div
-                className={cn(
-                  "h-fit sticky top-40 self-center",
-                  index % 2 === 0 ? "md:order-1" : "md:order-2"
-                )}
-              >
-                <h2 className="font-700 text-gray text-32 lg:text-42 leading-8 lg:leading-[42px]">
-                  {item?.title}
-                </h2>
-                <h2 className="mt-5 font-500 text-gray-100 text-18 lg:text-24 leading-8 lg:leading-[32px]">
-                  {item?.description}
-                </h2>
+      <Section className={cn("!pb-40", "bg-primary-100")}>
+        <TracingBeam scrollClass={"!left-[96%] hidden md:block"}>
+          {EXPERTISE_AREAS?.map((item, index) => (
+            <div className="container text-center p-5" key={index}>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div
+                  className={cn(
+                    "h-fit md:sticky top-40 pt-32 pb-20",
+                    index % 2 === 0 ? "md:order-1" : "md:order-2"
+                  )}
+                >
+                  <h2 className="font-700 text-white text-32 lg:text-42 leading-8 lg:leading-[42px]">
+                    {item?.title}
+                  </h2>
+                  <h2 className="mt-5 font-500 text-white/70 text-18 lg:text-24 leading-8 lg:leading-[32px]">
+                    {item?.description}
+                  </h2>
+                </div>
+                <BentoGrid
+                  className={cn(
+                    "mt-10 md:grid-cols-1 py-20",
+                    index % 2 === 0 ? "md:order-2" : "md:order:1"
+                  )}
+                >
+                  {item?.cardData?.map((card, i) => (
+                    <BentoGridItem
+                      key={i}
+                      title={card.title}
+                      description={card.description}
+                      className="h-full border border-gray/20 bg-primary-50 hover:bg-primary-50/80 p-5 md:p-7 hover:cursor-pointer shadow-md max-w-[400px] mx-auto min-h-[200px]"
+                      titleClass="md:text-20 text-18 leading-6 text-start"
+                      descriptionClass="leading-6 mt-4 text-start"
+                    />
+                  ))}
+                </BentoGrid>
               </div>
-              <BentoGrid
-                className={cn(
-                  "mt-10 md:grid-cols-1",
-                  index % 2 === 0 ? "md:order-2" : "md:order:1"
-                )}
-              >
-                {item?.cardData?.map((card, i) => (
-                  <BentoGridItem
-                    key={i}
-                    title={card.title}
-                    description={card.description}
-                    className="h-full border border-gray/20 hover:bg-white/80 p-5 md:p-7 hover:cursor-pointer shadow-md max-w-[400px] mx-auto"
-                    titleClass="md:text-20 text-18 leading-6 text-start"
-                    descriptionClass="leading-6 mt-4 text-start"
-                  />
-                ))}
-              </BentoGrid>
             </div>
-          </div>
-        </Section>
-      ))}
+          ))}
+        </TracingBeam>
+      </Section>
     </>
   );
 };

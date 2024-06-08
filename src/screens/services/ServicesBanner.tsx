@@ -18,7 +18,7 @@ const ServicesBanner = () => {
         </div>
         <div className="w-full h-full">
           <Image
-            src="/images/img_side.png"
+            src="/images/svg/services_banner.svg"
             sizes="100vh"
             alt="hero image"
             width={0}

@@ -27,7 +27,7 @@ export const TECHNOLOGIES = [
       "/images/technologies/nextjs-logo.svg",
       "/images/technologies/python-logo.svg",
     ],
-    sectionClass: "bg-gray-50",
+    sectionClass: "bg-primary-50",
   },
   {
     title: "Cloud",
@@ -49,7 +49,7 @@ export const TECHNOLOGIES = [
       "/images/technologies/ionic-logo.svg",
       "/images/technologies/react-logo.svg",
     ],
-    sectionClass: "bg-gray-50",
+    sectionClass: "bg-primary-50",
   },
   {
     title: "Database",
@@ -70,7 +70,7 @@ export const TECHNOLOGIES = [
       "/images/technologies/aijsx-log.svg",
       "/images/technologies/mysql-logo.svg",
     ],
-    sectionClass: "bg-gray-50",
+    sectionClass: "bg-primary-50",
   },
   {
     title: "Others",

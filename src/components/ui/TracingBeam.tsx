@@ -6,9 +6,11 @@ import React, { useEffect, useRef, useState } from "react";
 export const TracingBeam = ({
   children,
   className,
+  scrollClass,
 }: {
   children: React.ReactNode;
   className?: string;
+  scrollClass?: string;
 }) => {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -43,9 +45,9 @@ export const TracingBeam = ({
   return (
     <motion.div
       ref={ref}
-      className={cn("relative w-full max-w-4xl mx-auto h-full", className)}
+      className={cn("relative w-full max-w-6xl mx-auto h-full", className)}
     >
-      <div className="absolute -left-4 md:-left-20 top-3">
+      <div className={cn("absolute -left-4 md:-left-20 top-10", scrollClass)}>
         <motion.div
           transition={{
             duration: 0.2,
@@ -83,7 +85,7 @@ export const TracingBeam = ({
           <motion.path
             d={`M 1 0V -36 l 18 24 V ${svgHeight * 0.8} l -18 24V ${svgHeight}`}
             fill="none"
-            stroke="#9091A0"
+            stroke="#ffffff"
             strokeOpacity="0.16"
             transition={{
               duration: 10,
@@ -108,10 +110,10 @@ export const TracingBeam = ({
               y1={y1} // set y1 for gradient
               y2={y2} // set y2 for gradient
             >
-              <stop stopColor="#18CCFC" stopOpacity="0"></stop>
-              <stop stopColor="#18CCFC"></stop>
-              <stop offset="0.325" stopColor="#6344F5"></stop>
-              <stop offset="1" stopColor="#AE48FF" stopOpacity="0"></stop>
+              <stop stopColor="#ffffff" stopOpacity="0"></stop>
+              <stop stopColor="#9400D3"></stop>
+              <stop offset="0.325" stopColor="#8F00FF"></stop>
+              <stop offset="1" stopColor="#8806CE" stopOpacity="0"></stop>
             </motion.linearGradient>
           </defs>
         </svg>

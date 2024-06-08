@@ -30,7 +30,7 @@ const PersonalisedTrainingPage = () => {
           </div>
         </Section>
       ))}
-      <Section className="bg-gray-50">
+      <Section className="bg-primary-50">
         <div className="container">
           <div className="mx-auto max-w-[1024px]">
             <h2 className="font-700 text-gray text-center text-32 lg:text-42 leading-8 lg:leading-[42px]">
