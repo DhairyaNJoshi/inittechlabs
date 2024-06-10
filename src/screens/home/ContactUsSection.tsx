@@ -18,12 +18,13 @@ const phoneRegex = new RegExp(
 );
 
 const formSchema = yup.object().shape({
-  email: yup.string().email().required("Email is required"),
-  first_name: yup.string().required("First name is required"),
-  last_name: yup.string().required("Last name is required"),
+  email: yup.string().email().required("This field is required"),
+  name: yup.string().required("This field is required"),
+  companyName: yup.string().required("This field is required"),
+  requirement: yup.string().required("This field is required"),
   phone: yup
     .string()
-    .required("Phone number is required")
+    .required("This field is required")
     .matches(phoneRegex, "Invalid Number!")
     .min(10, "Must be at least 10 characters")
     .max(18, "Invalid Number!"),
@@ -33,9 +34,10 @@ type StepFormSchemaType = yup.InferType<typeof formSchema>;
 const ContactUsSection = () => {
   const initialValues = {
     email: "",
-    first_name: "",
-    last_name: "",
+    name: "",
+    companyName: "",
     phone: "",
+    requirement: "",
   };
   const form = useForm<StepFormSchemaType>({
     resolver: yupResolver(formSchema),
@@ -55,7 +57,7 @@ const ContactUsSection = () => {
             Contact INIT Tech Labs today to discuss your IT needs and explore
             how we can help your business thrive in the digital age.
           </p>
-          <div className="mx-auto mt-10 max-w-[600px] rounded-xl bg-white p-5 md:p-8` shadow-xl">
+          <div className="mx-auto mt-10 max-w-[600px] rounded-3xl bg-white p-5 md:p-8 shadow-xl">
             <Form {...form}>
               <p className="font-600 md:text-22 text-18 my-3 leading-5 text-gray text-center">
                 Schedule a Free Consultation
@@ -70,20 +72,19 @@ const ContactUsSection = () => {
               >
                 <FormField
                   control={form.control}
-                  name="first_name"
+                  name="name"
                   render={({ field }) => (
-                    <FormItem>
+                    <FormItem className="col-span-2">
                       <FormControl>
                         <>
                           <span className="flex text-14 font-500">
-                            First Name{" "}
+                            Name
                             <span className="mx-1 text-red-500">*</span>
                           </span>
                           <Input
                             type="text"
                             className={`w-full`}
                             placeholder="Enter your first name"
-                            error={form.formState.errors.first_name}
                             {...field}
                           />
                         </>
@@ -94,20 +95,19 @@ const ContactUsSection = () => {
                 />
                 <FormField
                   control={form.control}
-                  name="last_name"
+                  name="companyName"
                   render={({ field }) => (
-                    <FormItem>
+                    <FormItem className="col-span-2">
                       <FormControl>
                         <>
                           <span className="flex text-14 font-500">
-                            Last Name{" "}
+                            Company Name
                             <span className="mx-1 text-red-500">*</span>
                           </span>
                           <Input
                             type="text"
                             className={`w-full`}
                             placeholder="Enter your last name"
-                            error={form.formState.errors.last_name}
                             {...field}
                           />
                         </>
@@ -131,7 +131,6 @@ const ContactUsSection = () => {
                               type="email"
                               className={`w-full`}
                               placeholder="Enter email"
-                              error={form.formState.errors.email}
                               {...field}
                             />
                           </>
@@ -156,7 +155,30 @@ const ContactUsSection = () => {
                             type="text"
                             className={`w-full`}
                             placeholder="Enter your phone number"
-                            error={form.formState.errors.phone}
+                            {...field}
+                          />
+                        </>
+                      </FormControl>
+                      <FormMessage></FormMessage>
+                    </FormItem>
+                  )}
+                />
+
+                <FormField
+                  control={form.control}
+                  name="requirement"
+                  render={({ field }) => (
+                    <FormItem className="col-span-2">
+                      <FormControl>
+                        <>
+                          <span className="flex text-14 font-500">
+                            Requirement
+                            <span className="mx-1 text-red-500">*</span>
+                          </span>
+                          <Input
+                            type="text"
+                            className={`w-full`}
+                            placeholder="Enter your requirement"
                             {...field}
                           />
                         </>

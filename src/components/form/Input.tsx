@@ -1,57 +1,55 @@
+// Input component extends from shadcnui - https://ui.shadcn.com/docs/components/input
 "use client";
 import { cn } from "@/utils/cn";
-import { VariantProps, cva } from "class-variance-authority";
+import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
 import * as React from "react";
 
-export const inputVariants = cva(
-  "outline-none focus:ring-offset-0 rounded border",
-  {
-    variants: {
-      variant: {
-        default:
-          "text-gray focus:border focus:border-gray-400 placeholder:text-gray-500 border-gray-100",
-        secondary: "bg-gray-50/50 border-gray-100 rounded",
-      },
-      inputSize: {
-        default:
-          "px-3 py-2 text-16 placeholder:text-12 placeholder:font-400 sm:p-3",
-        lg: "lg:p-5 lg:text-18",
-      },
-    },
-    defaultVariants: {
-      variant: "default",
-      inputSize: "default",
-    },
-  }
-);
-
 export interface InputProps
-  extends React.InputHTMLAttributes<HTMLInputElement>,
-    VariantProps<typeof inputVariants> {
-  error?: any | undefined;
-}
+  extends React.InputHTMLAttributes<HTMLInputElement> {}
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
-  ({ className, type, variant, inputSize, error, ...props }, ref) => {
+  ({ className, type, ...props }, ref) => {
+    const radius = 100; // change this to increase the rdaius of the hover effect
+    const [visible, setVisible] = React.useState(false);
+
+    let mouseX = useMotionValue(0);
+    let mouseY = useMotionValue(0);
+
+    function handleMouseMove({ currentTarget, clientX, clientY }: any) {
+      let { left, top } = currentTarget.getBoundingClientRect();
+
+      mouseX.set(clientX - left);
+      mouseY.set(clientY - top);
+    }
     return (
-      <input
-        type={type}
-        className={cn(
-          inputVariants({ variant, inputSize, className }),
-          error && "border-red-400 focus:border-red-400"
-        )}
-        ref={ref}
-        {...props}
-      />
+      <motion.div
+        style={{
+          background: useMotionTemplate`
+        radial-gradient(
+          ${visible ? radius + "px" : "0px"} circle at ${mouseX}px ${mouseY}px,
+          var(--blue-500),
+          transparent 80%
+        )
+      `,
+        }}
+        onMouseMove={handleMouseMove}
+        onMouseEnter={() => setVisible(true)}
+        onMouseLeave={() => setVisible(false)}
+        className="p-[2px] rounded-lg transition duration-300 group/input"
+      >
+        <input
+          type={type}
+          className={cn(
+            "flex h-12 w-full border-none bg-[#dddddd] text-black shadow-input rounded-md p-3 text-sm  file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-neutral-400 focus-visible:outline-none focus-visible:ring-[2px]  focus-visible:ring-neutral-400 disabled:cursor-not-allowed disabled:opacity-50 group-hover/input:shadow-none transition duration-400 ",
+            className
+          )}
+          ref={ref}
+          {...props}
+        />
+      </motion.div>
     );
   }
 );
 Input.displayName = "Input";
-
-export interface TextareaProps
-  extends React.TextareaHTMLAttributes<HTMLTextAreaElement>,
-    VariantProps<typeof inputVariants> {
-  error?: any | undefined;
-}
 
 export { Input };
