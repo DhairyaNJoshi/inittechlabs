@@ -35,17 +35,17 @@ const WhyChooseUs = () => {
         <h2 className="font-700 text-gray text-32 lg:text-42 leading-8 lg:leading-[42px]">
           Why Choose INIT Tech Labs?
         </h2>
-        <BentoGrid className="mt-10 md:grid-cols-2">
+        <BentoGrid className="mt-10 md:grid-cols-1 lg:grid-cols-2">
           {SERVICES.map((item, i) => (
             <BentoGridItem
               key={i}
               title={item.title}
               description={item.description}
-              className="h-full border border-gray/20 hover:bg-white/80 p-5 md:p-7 hover:cursor-pointer shadow-md grid grid-cols-[auto_1fr] gap-x-6 space-y-2"
-              titleClass="md:text-20 text-18 leading-6 text-start"
-              descriptionClass="leading-6 mt-4 text-start"
+              className="h-full border border-gray/20 hover:bg-white/80 p-5 md:p-7 hover:cursor-pointer shadow-md grid sm:grid-cols-[auto_1fr] gap-x-6 space-y-2"
+              titleClass="md:text-20 text-18 leading-6 sm:text-start"
+              descriptionClass="leading-6 mt-4 sm:text-start"
               header={
-                <div className="self-center">
+                <div className="sm:self-center flex justify-center">
                   <Image
                     src={item.image}
                     alt={item.title}
