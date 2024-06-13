@@ -1,12 +1,21 @@
 "use client";
 import { IconMenu2 } from "@tabler/icons-react";
+import { AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { HoverMenu, HoverMenuItem } from "../ui/HoverMenu";
+import Sidebar from "./Sidebar";
 
 const Header = () => {
   const [activeHoverMenu, setActiveHoverMenu] = useState<string | null>(null);
+  const [toggleSidebar, setToggleSidebar] = useState(false);
+  const closeSidebar = () => {
+    setToggleSidebar(false);
+  };
+  const handleToggleSidebar = () => {
+    setToggleSidebar(!toggleSidebar);
+  };
   return (
     <div className="sticky top-0 z-[28] w-full bg-white shadow-md">
       <div className="container mx-auto p-4">
@@ -69,11 +78,17 @@ const Header = () => {
               Portfolio{" "}
             </Link>
           </div>
-          <div className="flex items-center md:hidden">
+          <div
+            className="flex items-center md:hidden"
+            onClick={handleToggleSidebar}
+          >
             <IconMenu2 stroke={2} />
           </div>
         </div>
       </div>
+      <AnimatePresence>
+        {toggleSidebar && <Sidebar closeSidebar={closeSidebar}></Sidebar>}
+      </AnimatePresence>
     </div>
   );
 };

@@ -1,4 +1,7 @@
 .bg-gradient-primary {
-  background: linear-gradient(to bottom right,#d5dfee,
-  #f3ecdc,#d5dfee)
+  background: linear-gradient(to bottom right, #d5dfee, #f3ecdc, #d5dfee);
+}
+
+.bg-gradient-secondary {
+  background: linear-gradient(to bottom right, #c8f6ff, #f6f2eaad, #c8f6ff);
 }

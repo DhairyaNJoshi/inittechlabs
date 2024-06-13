@@ -7,7 +7,7 @@ import Image from "next/image";
 
 const CoursesList = () => {
   return (
-    <Section className="bg-white">
+    <Section className="bg-white sm:px-0 px-5">
       <div className="container">
         <h1 className="text-32 md:text-42 font-700 text-center">Our Courses</h1>
         <BentoGrid className="mt-10 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1">

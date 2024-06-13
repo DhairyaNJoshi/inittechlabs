@@ -34,7 +34,7 @@ const CoursesHeroSection = () => {
             className="text-center text-20 md:text-24 text-gray leading-5 md:leading-7 font-600 my-6 md:my-10"
           />
         </div>
-        <BentoGrid className="mt-10">
+        <BentoGrid className="mt-10 sm:px-0 px-5">
           {CARD_ITEMS.map((item, i) => (
             <BentoGridItem
               key={i}

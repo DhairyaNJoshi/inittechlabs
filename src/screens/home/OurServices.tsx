@@ -7,7 +7,7 @@ const SERVICES = [
     title: "Harness the power of technology",
     description:
       "From custom software development to cloud solutions and IT infrastructure management, INIT Tech Labs equips you with the technological tools you need to streamline operations, boost efficiency, and gain a competitive edge.",
-    cardClass: "col-span-2",
+    cardClass: "md:col-span-2",
   },
   {
     title: "Web Development",
@@ -25,7 +25,7 @@ const SERVICES = [
     title: "Implement powerful marketing strategies",
     description:
       "We don't just build websites, we help you drive traffic to them. Our marketing specialists create data-driven strategies that leverage SEO, social media marketing, and content marketing to increase your online visibility and attract qualified leads.",
-    cardClass: "col-span-2",
+    cardClass: "md:col-span-2",
   },
   {
     title: "Cloud Solutions",
