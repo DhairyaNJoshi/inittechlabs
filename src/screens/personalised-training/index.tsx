@@ -1,3 +1,4 @@
+import ContactUsForm from "@/components/ContactUsForm";
 import Section from "@/components/Section";
 import { BentoGrid, BentoGridItem } from "@/components/ui/BentoGrid";
 import { PERSONALISED_TRAINING_PAGE_DATA } from "@/constants/PersonalisedTraining";
@@ -42,6 +43,7 @@ const PersonalisedTrainingPage = () => {
               find the perfect fit for your needs. Contact INIT Tech Labs today
               to discuss your goals and unlock your app development potential!
             </p>
+            <ContactUsForm title="Schedule a Free Consultation" />
           </div>
         </div>
       </Section>

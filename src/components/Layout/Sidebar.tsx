@@ -45,7 +45,7 @@ const Sidebar = ({ closeSidebar }: SidebarProps) => {
             />
           </div>
           <div className="px-6 py-6 pb-6 lg:px-20">
-            <ul className=" text-20 font-600 leading-10 text-gray">
+            <ul className="text-20 font-600 leading-10 text-gray">
               <li>
                 <Link onClick={closeSidebar} href="/services">
                   Services
@@ -61,17 +61,12 @@ const Sidebar = ({ closeSidebar }: SidebarProps) => {
                   Buy Courses
                 </Link>
               </li>
-              <li>
+              <li className="leading-6">
                 <Link
                   onClick={closeSidebar}
                   href="/training/personalised-training"
                 >
-                  Personalised Training
-                </Link>
-              </li>
-              <li>
-                <Link onClick={closeSidebar} href="/">
-                  Bootcamp
+                  Personalised Training & Bootcamp
                 </Link>
               </li>
               <li>

@@ -13,11 +13,12 @@ const TechnologiesPage = () => {
             <h2 className="font-700 text-gray text-32 lg:text-42 leading-8 lg:leading-[42px]">
               {item?.title}
             </h2>
-            <BentoGrid className="mt-10 md:grid-cols-6 sm:grid-cols-4 grid-cols-2">
+            {/* <BentoGrid className="mt-10 md:grid-cols-6 sm:grid-cols-4 grid-cols-2">*/}
+            <BentoGrid className="mt-10 flex flex-wrap justify-center">
               {item?.images?.map((img, i) => (
                 <div
                   className={cn(
-                    "row-span-1 rounded-xl group/bento hover:shadow-xl transition duration-200 shadow-input p-4 bg-white border border-gray-100/20 justify-between flex flex-col space-y-4 shadow-lg"
+                    "row-span-1 rounded-xl group/bento hover:shadow-xl transition duration-200 shadow-input p-4 bg-white border border-gray-100/20 justify-between flex flex-col space-y-4 shadow-lg h-[236px] w-[236px]"
                   )}
                   key={i}
                 >

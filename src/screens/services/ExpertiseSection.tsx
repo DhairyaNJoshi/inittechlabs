@@ -12,7 +12,7 @@ const ExpertiseSection = () => {
         <div className="grid container justify-center">
           <TextGenerateEffect
             words="Unparalleled Expertise Across Every Stage of Development"
-            className="max-w-6xl mx-auto font-700 !text-white text-32 lg:text-48 leading-8 lg:leading-[48px] text-center"
+            className="max-w-6xl mx-auto font-700 !text-white text-32 lg:text-48 leading-10 lg:leading-[56px] text-center"
           />
           <TextGenerateEffect
             words="We offer a comprehensive suite of services designed to cater to your specific needs, from conceptualization and design to development, deployment, and ongoing maintenance. Here's a glimpse into what INIT Tech Labs can do for you:"
