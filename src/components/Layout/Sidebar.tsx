@@ -7,6 +7,37 @@ import { Portal } from "../ui/Portal";
 type SidebarProps = {
   closeSidebar: () => void;
 };
+
+const SIDEBAR_MENU = [
+  {
+    name: "Services",
+    link: "/services",
+  },
+  {
+    name: "Technologies",
+    link: "/technologies",
+  },
+  {
+    name: "Buy Courses",
+    link: "/training/courses",
+  },
+  {
+    name: "Personalised Training & Bootcamp",
+    link: "/training/personalised-training",
+  },
+  {
+    name: "Blog",
+    link: "/",
+  },
+  {
+    name: "Contact",
+    link: "/",
+  },
+  {
+    name: "Portfolio",
+    link: "/",
+  },
+];
 const Sidebar = ({ closeSidebar }: SidebarProps) => {
   return (
     <Portal>
@@ -23,12 +54,13 @@ const Sidebar = ({ closeSidebar }: SidebarProps) => {
           animate={{ x: "0%" }}
           transition={{ ease: "easeIn", duration: 0.1 }}
           exit={{ x: "-100%" }}
-          className=" overflow-cst fixed left-0 top-0 z-[60] h-full w-11/12 overflow-auto bg-white shadow-2xl sm:w-auto"
+          className=" overflow-cst fixed left-0 top-0 z-[60] h-full w-11/12 overflow-auto bg-primary-50 shadow-2xl sm:w-auto"
         >
           <div className="sticky top-0 z-10 flex items-center gap-6 bg-white p-3 shadow-sm sm:p-0">
             <Link
               className="h-full w-full sm:max-w-[100px] max-w-[70px] max-h-[50px]"
               href={"/"}
+              onClick={closeSidebar}
             >
               <Image
                 src={"/images/INITlogo.png"}
@@ -44,46 +76,15 @@ const Sidebar = ({ closeSidebar }: SidebarProps) => {
               className="ml-auto h-7 w-7 text-gray sm:hidden"
             />
           </div>
-          <div className="px-6 py-6 pb-6 lg:px-20">
-            <ul className="text-20 font-600 leading-10 text-gray">
-              <li>
-                <Link onClick={closeSidebar} href="/services">
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link onClick={closeSidebar} href="/technologies">
-                  Technologies
-                </Link>
-              </li>
-              <li>
-                <Link onClick={closeSidebar} href="/training/courses">
-                  Buy Courses
-                </Link>
-              </li>
-              <li className="leading-6">
-                <Link
-                  onClick={closeSidebar}
-                  href="/training/personalised-training"
-                >
-                  Personalised Training & Bootcamp
-                </Link>
-              </li>
-              <li>
-                <Link onClick={closeSidebar} href="/">
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link onClick={closeSidebar} href="/">
-                  Contact
-                </Link>
-              </li>
-              <li>
-                <Link onClick={closeSidebar} href="/">
-                  Portfolio
-                </Link>
-              </li>
+          <div className="py-6 pb-6 lg:px-20">
+            <ul className="text-20 font-600 leading-10 text-gray grid divide-y divide-gray-100/40">
+              {SIDEBAR_MENU?.map((item, i) => (
+                <li key={i} className="px-6 py-2 leading-7">
+                  <Link onClick={closeSidebar} href={item.link}>
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </m.div>
