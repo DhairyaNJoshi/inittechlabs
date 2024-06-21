@@ -65,13 +65,19 @@ const Header = () => {
                 </div>
               </HoverMenuItem>
             </HoverMenu>
-            <Link href="/" className="hover:font-600 hover:scale-105">
+            <Link
+              href="/"
+              className="hover:font-600 hover:scale-105 pointer-events-none"
+            >
               Blog
             </Link>
-            <Link href="/" className="hover:font-600 hover:scale-105">
+            <Link href="/contact-us" className="hover:font-600 hover:scale-105">
               Contact
             </Link>
-            <Link href="/" className="hover:font-600 hover:scale-105">
+            <Link
+              href="/"
+              className="hover:font-600 hover:scale-105 pointer-events-none"
+            >
               Portfolio{" "}
             </Link>
           </div>
