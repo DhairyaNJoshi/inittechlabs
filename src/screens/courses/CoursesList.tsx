@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/Button";
 import { COURSES_LIST } from "@/constants/Courses";
 import { cn } from "@/utils/cn";
 import Image from "next/image";
+import Link from "next/link";
 
 const CoursesList = () => {
   return (
@@ -20,7 +21,7 @@ const CoursesList = () => {
             >
               <Image
                 src={course?.img}
-                className="w-full h-full max-h-[170px] rounded-lg"
+                className="w-full h-full max-h-[200px] rounded-lg"
                 alt="img"
                 sizes="100vw"
                 height={0}
@@ -31,9 +32,9 @@ const CoursesList = () => {
                   {course?.name}
                 </div>
                 <div className="flex justify-center">
-                  <Button className="text-white rounded-xl" size={"sm"}>
-                    ${course?.amount}
-                  </Button>
+                  <Link href={course?.link} className={"text-white rounded-xl"}>
+                    <Button size={"sm"}>View Course</Button>
+                  </Link>
                 </div>
               </div>
             </div>

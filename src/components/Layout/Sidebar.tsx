@@ -1,4 +1,3 @@
-import { cn } from "@/utils/cn";
 import { IconX } from "@tabler/icons-react";
 import { LazyMotion, domAnimation, m } from "framer-motion";
 import Image from "next/image";
@@ -28,8 +27,7 @@ const SIDEBAR_MENU = [
   },
   {
     name: "Blog",
-    link: "/",
-    className: "pointer-events-none",
+    link: "/blog",
   },
   {
     name: "Contact",
@@ -37,8 +35,7 @@ const SIDEBAR_MENU = [
   },
   {
     name: "Portfolio",
-    link: "/",
-    className: "pointer-events-none",
+    link: "/portfolio",
   },
 ];
 const Sidebar = ({ closeSidebar }: SidebarProps) => {
@@ -83,11 +80,7 @@ const Sidebar = ({ closeSidebar }: SidebarProps) => {
             <ul className="text-20 font-600 leading-10 text-gray grid divide-y divide-gray-100/40">
               {SIDEBAR_MENU?.map((item, i) => (
                 <li key={i} className="px-6 py-2 leading-7">
-                  <Link
-                    onClick={closeSidebar}
-                    href={item.link}
-                    className={cn(item.className)}
-                  >
+                  <Link onClick={closeSidebar} href={item.link}>
                     {item.name}
                   </Link>
                 </li>

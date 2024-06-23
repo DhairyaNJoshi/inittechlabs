@@ -6,8 +6,7 @@ import Link from "next/link";
 const INFORMATION = [
   {
     title: "Our Office",
-    description:
-      "Our virtual headquarters is embedded in the heart of your software.",
+    description: "Vadodara, India",
     image: "/images/svg/location-image.svg",
   },
   {
@@ -46,8 +45,8 @@ const ContactCardSection = () => {
                   className="w-full h-full max-w-[120px] max-h-[120px]"
                 />
               </div>
-              <div>
-                <h3 className="font-700 text-white text-20 leading-7">
+              <div className="">
+                <h3 className="font-700 text-white text-20 leading-10">
                   {item.title}
                 </h3>
                 {item.description && (

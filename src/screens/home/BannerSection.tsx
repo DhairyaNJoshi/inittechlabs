@@ -8,19 +8,19 @@ const BannerSection = () => {
       <div className="grid md:grid-cols-2 gap-5 container z-10">
         <div className="w-full max-w-[920px] p-5 md:text-start text-center">
           <TextGenerateEffect
-            words="Unleashing Innovation Through Technology"
+            words="Web, Mobile & AI"
             className="font-700 text-gray text-32 lg:text-48 leading-8 lg:leading-[48px]"
           />
 
           <TextGenerateEffect
-            words="We engineer the future, one line of code at a time."
+            words="Your trusted partner for advanced IT Solutions."
             className="text-20 md:text-24 text-gray leading-5 md:leading-7 font-600 my-6 md:my-10"
           />
 
-          <TextGenerateEffect
+          {/* <TextGenerateEffect
             words="INIT Tech Labs is your trusted partner for cutting-edge IT"
             className="text-18 md:text-20 text-gray-100 leading-5 md:leading-7 font-500"
-          ></TextGenerateEffect>
+          ></TextGenerateEffect> */}
         </div>
         <div className="w-full h-full">
           <Image

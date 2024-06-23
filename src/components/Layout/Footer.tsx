@@ -6,6 +6,7 @@ import {
   IconBrandX,
   IconBrandYoutube,
 } from "@tabler/icons-react";
+import Link from "next/link";
 import Section from "../Section";
 
 const SocialMediaIcons = [
@@ -46,7 +47,7 @@ const Footer = () => {
               key={i}
             >
               <span className="tooltip">{item?.tooltipName}</span>
-              {item?.Icon}
+              <Link href={item?.link}>{item?.Icon}</Link>
             </li>
           ))}
         </ul>
