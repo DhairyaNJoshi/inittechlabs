@@ -27,7 +27,7 @@ const SIDEBAR_MENU = [
   },
   {
     name: "Blog",
-    link: "/blog",
+    link: "/blogs",
   },
   {
     name: "Contact",

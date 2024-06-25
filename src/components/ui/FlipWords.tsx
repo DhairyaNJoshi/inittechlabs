@@ -69,7 +69,7 @@ const FlipWords = ({
             )}
             key={currentWord}
           >
-            {currentWord.split(" ").map((word, wordIndex) => (
+            {currentWord.split(" ").map((word, wordIndex, array) => (
               <Fragment key={wordIndex}>
                 {word.split("").map((letter, index) => (
                   <motion.span
@@ -85,16 +85,15 @@ const FlipWords = ({
                     {letter}
                   </motion.span>
                 ))}
-                {word !== "&" ? (
-                  wordIndex === 1 ? (
-                    <br />
-                  ) : wordIndex === 2 ? (
-                    <br />
-                  ) : (
-                    <>&nbsp;</>
-                  )
+                {array[1] !== "&" && wordIndex === 1 ? (
+                  <br />
                 ) : (
-                  <>&nbsp;</>
+                  array.length - 1 !== wordIndex && <>&nbsp;</>
+                )}
+                {array[1] === "&" && wordIndex === 2 ? (
+                  <br />
+                ) : (
+                  array.length - 1 !== wordIndex && <>&nbsp;</>
                 )}
               </Fragment>
             ))}

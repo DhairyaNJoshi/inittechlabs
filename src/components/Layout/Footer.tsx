@@ -13,22 +13,22 @@ const SocialMediaIcons = [
   {
     Icon: <IconBrandFacebook stroke={2} className="h-8 w-8" />,
     tooltipName: "Facebook",
-    link: "https://www.facebook.com/profile.php?id=80090273675841",
+    link: "https://www.facebook.com/profile.php?id=100084945152681",
   },
   {
     Icon: <IconBrandX stroke={2} className="h-8 w-8" />,
     tooltipName: "Twitter",
-    link: "https://x.com/inittechlabs?s=21&t=WxtNzy0EY9v6A4fPIj8sdA",
+    link: "",
   },
   {
     Icon: <IconBrandYoutube stroke={2} className="h-8 w-8" />,
     tooltipName: "Youtube",
-    link: "https://youtube.com/@inittechlabs?si=Gi0eywjGcW1rndrQ",
+    link: "https://www.youtube.com/@inittechlabs",
   },
   {
     Icon: <IconBrandInstagram stroke={2} className="h-8 w-8" />,
     tooltipName: "Instagram",
-    link: "https://www.instagram.com/inittechlabs?igsh=MWlmZ2lodm02cTFtdQ==",
+    link: "https://www.instagram.com/inittechlabs/",
   },
   {
     Icon: <IconBrandLinkedin stroke={2} className="h-8 w-8" />,

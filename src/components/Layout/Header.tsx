@@ -65,7 +65,7 @@ const Header = () => {
                 </div>
               </HoverMenuItem>
             </HoverMenu>
-            <Link href="/blog" className="hover:font-600 hover:scale-105">
+            <Link href="/blogs" className="hover:font-600 hover:scale-105">
               Blog
             </Link>
             <Link href="/contact-us" className="hover:font-600 hover:scale-105">
