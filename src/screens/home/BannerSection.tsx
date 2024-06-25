@@ -6,7 +6,7 @@ const BannerSection = () => {
   return (
     <AuroraBackground>
       <div className="grid md:grid-cols-2 gap-5 container z-10">
-        <div className="w-full max-w-[920px] p-5 md:text-start text-center">
+        <div className="w-full max-w-[920px] p-5 md:text-start text-center my-auto">
           <TextGenerateEffect
             words="Web, Mobile & AI"
             className="font-700 text-gray text-32 lg:text-48 leading-8 lg:leading-[48px]"
