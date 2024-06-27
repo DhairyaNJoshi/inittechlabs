@@ -80,7 +80,7 @@ const FlipWords = ({
                       delay: index * 0.08,
                       duration: 0.4,
                     }}
-                    className="inline-block"
+                    className="inline-block text-gray"
                   >
                     {letter}
                   </motion.span>
@@ -93,7 +93,7 @@ const FlipWords = ({
                 {array[1] === "&" && wordIndex === 2 ? (
                   <br />
                 ) : (
-                  array.length - 1 !== wordIndex && <>&nbsp;</>
+                  array.length - 1 !== wordIndex && <></>
                 )}
               </Fragment>
             ))}

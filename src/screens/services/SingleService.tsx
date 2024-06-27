@@ -1,8 +1,6 @@
 "use client";
 import { BentoGrid, BentoGridItem } from "@/components/ui/BentoGrid";
-import FlipWords from "@/components/ui/FlipWords";
 import { cn } from "@/utils/cn";
-import { useEffect, useRef, useState } from "react";
 
 const SingleService = ({
   item,
@@ -19,29 +17,6 @@ const SingleService = ({
   };
   index: number;
 }) => {
-  const [isVisible, setIsVisible] = useState<boolean>(false);
-
-  const observer = useRef<IntersectionObserver | null>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    observer.current = new IntersectionObserver(
-      ([entry]) => {
-        setIsVisible(entry.isIntersecting);
-      },
-      { threshold: 0.5 } // Adjust threshold as needed
-    );
-
-    if (containerRef.current) {
-      observer.current.observe(containerRef.current);
-    }
-
-    return () => {
-      if (observer.current) {
-        observer.current.disconnect();
-      }
-    };
-  }, []);
-
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       <div
@@ -49,10 +24,9 @@ const SingleService = ({
           "h-fit md:sticky top-40 pt-8 sm:pt-32 sm:pb-20",
           index % 2 === 0 ? "md:order-1" : "md:order-2"
         )}
-        ref={containerRef}
       >
         <h2 className="font-700 text-gray text-32 lg:text-42 leading-8 lg:leading-[42px]">
-          <FlipWords words={[item?.title]} isVisible={isVisible} />
+          {item?.title}
         </h2>
         <h2 className="mt-5 font-500 text-gray-100 text-18 lg:text-24 leading-8 lg:leading-[32px]">
           {item?.description}

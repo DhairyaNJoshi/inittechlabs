@@ -1,5 +1,7 @@
 import { AuroraBackground } from "@/components/AuroraBackground";
+import FlipWords from "@/components/ui/FlipWords";
 import { TextGenerateEffect } from "@/components/ui/TextGenerateEffect";
+import { EXPERTISE_AREAS } from "@/constants/ExpertiseAreas";
 import Image from "next/image";
 
 const BannerSection = () => {
@@ -7,9 +9,9 @@ const BannerSection = () => {
     <AuroraBackground>
       <div className="grid md:grid-cols-2 gap-5 container z-10">
         <div className="w-full max-w-[920px] p-5 md:text-start text-center my-auto">
-          <TextGenerateEffect
-            words="Web, Mobile & AI"
-            className="font-700 text-gray text-32 lg:text-48 leading-8 lg:leading-[48px]"
+          <FlipWords
+            words={EXPERTISE_AREAS.map((item) => item.title)}
+            className="font-700 text-gray text-32 lg:text-48 leading-8 lg:leading-[48px] h-20"
           />
 
           <TextGenerateEffect
