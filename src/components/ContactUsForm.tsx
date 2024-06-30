@@ -9,8 +9,12 @@ import {
 import { Input } from "@/components/form/Input";
 import { Button } from "@/components/ui/Button";
 import { yupResolver } from "@hookform/resolvers/yup";
+import axios from "axios";
+import { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
+import { toast } from "react-hot-toast";
 import * as yup from "yup";
+
 const phoneRegex = new RegExp(
   /^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/
 );
@@ -36,6 +40,7 @@ const ContactUsForm = ({
   title?: string;
   subTitle?: string;
 }) => {
+  const [isLoading, setIsLoading] = useState(false);
   const initialValues = {
     email: "",
     name: "",
@@ -48,7 +53,20 @@ const ContactUsForm = ({
     defaultValues: initialValues,
   });
   const onSubmit: SubmitHandler<StepFormSchemaType> = async (data) => {
-    console.log("data", data);
+    setIsLoading(true);
+    try {
+      const result = await axios.post(`/api/form/submit`, data);
+
+      if (result.status === 200) {
+        toast.success("Your request has been submitted!");
+        setIsLoading(false);
+        form.reset();
+      }
+    } catch (error) {
+      setIsLoading(false);
+      toast.error("Something went wrong. Please try again later.");
+      console.log(error);
+    }
   };
   return (
     <div className="sm:mx-auto mt-10 max-w-[600px] rounded-3xl bg-white p-5 md:p-8 shadow-xl  mx-2">
@@ -189,6 +207,8 @@ const ContactUsForm = ({
             className="col-span-2 w-full text-white"
             size={"sm"}
             type="submit"
+            isLoading={isLoading}
+            disabled={isLoading}
           >
             Submit
           </Button>

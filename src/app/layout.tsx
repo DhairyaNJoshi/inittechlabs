@@ -2,6 +2,7 @@ import Footer from "@/components/Layout/Footer";
 import Header from "@/components/Layout/Header";
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
+import { Toaster } from "react-hot-toast";
 import "./globals.css";
 
 const montserrat = Montserrat({
@@ -25,6 +26,18 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <Toaster
+          position="top-center"
+          reverseOrder={false}
+          toastOptions={{
+            // Define default options
+            className: "",
+            duration: 5000,
+            style: {
+              boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
+            },
+          }}
+        />
       </body>
     </html>
   );

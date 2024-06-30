@@ -3,6 +3,7 @@ import { cn } from "@/utils/cn";
 import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
 import * as React from "react";
+import Loader from "../Loader/Loader";
 
 const buttonVariants = cva(
   "rounded-md font-600 leading-5 lg:leading-6 border transition duration-100 ease-in-out whitespace-nowrap",
@@ -59,6 +60,11 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         {...props}
       >
         {children}
+        {isLoading && (
+          <div className="absolute inset-[1px] bg-primary">
+            <Loader className="text-white sm:mr-0 mr-7" />
+          </div>
+        )}
       </Comp>
     );
   }

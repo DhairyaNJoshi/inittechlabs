@@ -11,7 +11,7 @@ const BannerSection = () => {
         <div className="w-full max-w-[920px] p-5 md:text-start text-center my-auto">
           <FlipWords
             words={EXPERTISE_AREAS.map((item) => item.title)}
-            className="font-700 text-gray text-32 lg:text-48 leading-8 lg:leading-[48px] h-20"
+            className="font-700 text-gray text-24 lg:text-48 leading-6 lg:leading-[48px] sm:h-20 h-10 "
           />
 
           <TextGenerateEffect
